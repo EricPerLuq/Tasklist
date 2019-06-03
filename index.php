@@ -44,7 +44,7 @@
 	<ul>
 		<?
 		foreach($Pendiente as $row){
-			echo "<li>" . $row['Tarea']." <a href='?Hecho=".$row['id']."'>Hecho</a> <a href='?Borrar=".$row['id']."'>Borrar</a></li><br>";
+			echo "<li>" . $row['tarea']." <a href='?Hecho=".$row['id']."'>Hecho</a> <a href='?Borrar=".$row['id']."'>Borrar</a></li><br>";
 		}
 ?>
 	</ul>
@@ -53,7 +53,7 @@
 	<ul>
 		<?
 		foreach($Hecho as $row){
-			echo "<li>" . $row['Tarea']." <a href='?Pendiente=".$row['id']."'>Pendiente</a> <a href='?Borrar=".$row['id']."'>Borrar</a></li><br>";
+			echo "<li>" . $row['tarea']." <a href='?Pendiente=".$row['id']."'>Pendiente</a> <a href='?Borrar=".$row['id']."'>Borrar</a></li><br>";
 		}
 ?>
 	</ul>
