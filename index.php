@@ -16,10 +16,10 @@
         ltrim($database["path"], "/")
       ));
 	if(isset($_GET['Hecho'])){
-		$query = $db->prepare("UPDATE TaskList SET state = 1 WHERE id = ".$_GET['Hecho'].";");
+		$query = $db->prepare("UPDATE TaskList SET Estado = 1 WHERE id = ".$_GET['Hecho'].";");
 		$query->execute();
 	}else if(isset($_GET['Pendiente'])){
-		$query = $db->prepare("UPDATE TaskList SET state = 0 WHERE id = ".$_GET['Pendiente'].";");
+		$query = $db->prepare("UPDATE TaskList SET Estado = 0 WHERE id = ".$_GET['Pendiente'].";");
 		$query->execute();
 	}else if(isset($_GET['Borrar'])){
 		$query = $db->prepare("DELETE FROM TaskList WHERE id = ".$_GET['Borrar'].";");
